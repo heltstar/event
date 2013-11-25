@@ -17,4 +17,7 @@
 *.out
 *.app
 
+#my created
 *~
+test
+*.gch

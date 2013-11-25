@@ -72,9 +72,9 @@ sint32 event_wait(sint32 handle, sint32 want,int timeout, sint32 * events)
 			{
 				break;
 			}
-			timeout -= 10;			
+			timeout -= 100;			
 		}
-		usleep(10);
+		usleep(100);
 	}	
 
 	event_s.wait_events=0;
