@@ -5,8 +5,8 @@
 
 typedef signed int sint32;
 typedef unsigned int uint32;
-typedef signed short int sshort16;
-typedef unsigned short int ushort16;
+typedef signed short int sint16;
+typedef unsigned short int uint16;
 
 
 
