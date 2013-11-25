@@ -1,12 +1,12 @@
-
 TEST= test
 EVENT = event
 
 $ALL:$TEST $EVENT
+
 $TEST:$(EVENT).o
-	gcc -o test test.c event.o -lpthread
-$EVENT:
-	gcc -c event.c event.h
+	gcc -o $(TEST) $(TEST).c $(EVENT).o -lpthread
+$EVENT:$(EVENT).c $(EVENT).h
+	gcc -c $(EVENT).c $(EVENT).h
 
 clean:
-	rm *.o test
+	rm *.o $(TEST)
