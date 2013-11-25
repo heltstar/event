@@ -6,7 +6,7 @@ void *test_body()
 {
 
 	int want=6;
-	int timeout=2*100*1000;
+	int timeout=2*1000*1000;
 	int events;
 	pthread_detach(pthread_self());
 	event_wait(0, want,timeout, &events);
@@ -26,6 +26,5 @@ int main()
 	pthread_create(&tid,NULL,test_body,NULL);
 	sleep(1);
 	event_post(0,3);
-
-	sleep(10);
+	sleep(3);
 }
